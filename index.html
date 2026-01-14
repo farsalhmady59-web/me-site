@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القرآن الكريم - إهداء لروح المرحوم سعد عبد الغني أبو زيد</title>
+    
+    <!-- خطوط عربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Reem+Kufi+Fun:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500&family=Lateef:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #2c7a7b;
+            --light-color: #f8f9fa;
+            --dark-color: #2d3748;
+            --accent-color: #38b2ac;
+            --memory-color: #4a6fa5;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Noto Naskh Arabic', serif;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
+            color: var(--dark-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #1a5f7a, #2c7a7b, #4a6fa5);
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 5px solid #e6b325;
+        }
+        
+        .header h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        
+        .memory-section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 1200px;
+            border-right: 6px solid var(--memory-color);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .memory-section:before {
+            content: "";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 2rem;
+            color: rgba(74, 111, 165, 0.1);
+            z-index: 0;
+        }
+        
+        .memory-section:after {
+            content: "";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 2rem;
+            color: rgba(74, 111, 165, 0.1);
+            z-index: 0;
+        }
+        
+        .memory-section h2 {
+            font-family: 'Lateef', cursive;
+            font-size: 2.2rem;
+            color: var(--memory-color);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .memory-section p {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.8;
+        }
+        
+        .prayer {
+            background: linear-gradient(135deg, #f8f0e3, #f5e9d3);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-right: 4px solid #e6b325;
+            font-family: 'Lateef', cursive;
+            font-size: 1.4rem;
+            color: #5d4037;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .search-container {
+            padding: 20px 15px 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .search-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+        
+        #search {
+            width: 100%;
+            padding: 16px 50px 16px 20px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            border: 2px solid #d4e1f2;
+            font-family: 'Noto Naskh Arabic', serif;
+            background-color: white;
+            transition: all 0.3s;
+        }
+        
+        #search:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(56, 178, 172, 0.2);
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px 30px;
+        }
+        
+        .list-section {
+            width: 100%;
+            padding: 15px;
+        }
+        
+        .list-section h2 {
+            font-family: 'Amiri', serif;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-right: 10px;
+            border-right: 4px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .list-section h2 i {
+            color: var(--memory-color);
+        }
+        
+        .list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 18px 15px;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 90px;
+            position: relative;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            background-color: #f0f7ff;
+            border-color: var(--accent-color);
+        }
+        
+        .card.active {
+            background-color: #e6f2ff;
+            border-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .card.active:after {
+            content: "";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #e6b325;
+            font-size: 0.9rem;
+        }
+        
+        .surah-name {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .surah-info {
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 8px;
+        }
+        
+        .viewer-section {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        .viewer-section h2 {
+            font-family: 'Amiri', serif;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-right: 10px;
+            border-right: 4px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .viewer-section h2 i {
+            color: var(--memory-color);
+        }
+        
+        .viewer-container {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            height: 500px;
+            border: 1px solid #d4e1f2;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .signature {
+            font-family: 'Reem Kufi Fun', cursive;
+            font-size: 1.3rem;
+            color: var(--memory-color);
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-top: 2px solid rgba(230, 179, 37, 0.5);
+            border-bottom: 2px solid rgba(230, 179, 37, 0.5);
+            direction: ltr;
+        }
+        
+        .signature span {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .loading i {
+            font-size: 2rem;
+        }
+        
+        /* تصميم متجاوب */
+        @media (min-width: 992px) {
+            .list-section {
+                width: 40%;
+                max-height: calc(100vh - 300px);
+                overflow-y: auto;
+            }
+            
+            .viewer-section {
+                width: 60%;
+                margin-top: 0;
+            }
+            
+            .list {
+                max-height: calc(100vh - 370px);
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .memory-section {
+                margin: 30px auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .list {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .card {
+                padding: 15px 10px;
+                min-height: 80px;
+            }
+            
+            .surah-name {
+                font-size: 1.2rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .memory-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .memory-section p {
+                font-size: 1.1rem;
+            }
+            
+            .prayer {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* شريط التمرير */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 1.1rem;
+            grid-column: 1 / -1;
+        }
+        
+        .memory-icon {
+            color: var(--memory-color);
+            margin: 0 8px;
+        }
+        
+        .footer-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            padding: 15px;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1><i class="fas fa-book-quran"></i> القرآن الكريم</h1>
+        <p>إهداء لروح المرحوم سعد عبد الغني أبو زيد</p>
+        <p>رحمه الله وغفر له وأسكنه فسيح جناته</p>
+    </div>
+    
+    <div class="memory-section">
+        <h2><i class="fas fa-heart memory-icon"></i> إلى روح المرحوم <i class="fas fa-heart memory-icon"></i></h2>
+        <p><strong>سعد عبد الغني أبو زيد</strong></p>
+        <p>اللهم ارحمه وعافه واعف عنه، وأكرم نزله، ووسع مدخله، واغسله بالماء والثلج والبرد</p>
+        <div class="prayer">
+            <i class="fas fa-pray"></i> 
+            ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار
+            <i class="fas fa-pray"></i>
+        </div>
+    </div>
+    
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" id="search" placeholder=" ابحث عن سورة (مثال: البقرة, يوسف, الناس)">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="list-section">
+            <h2><i class="fas fa-list"></i> قائمة السور</h2>
+            <div class="list" id="list"></div>
+        </div>
+        
+        <div class="viewer-section">
+            <h2><i class="fas fa-book-open"></i> عرض السورة</h2>
+            <div class="viewer-container">
+                <div id="loading" class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <div>جارٍ تحميل القرآن الكريم...</div>
+                    <div style="font-size: 0.9rem; color: #777;">هذا العمل صدقة جارية عن روح المرحوم</div>
+                </div>
+                <iframe id="quranFrame" src="" title="عرض القرآن الكريم"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <div class="signature">
+        <i class="fas fa-hand-holding-heart"></i> 
+        هذا العمل صدقة جارية عن روح المرحوم 
+        <span>سعد عبد الغني أبو زيد</span>
+        <i class="fas fa-hand-holding-heart"></i>
+    </div>
+    
+    <div class="footer-note">
+        <i class="fas fa-star memory-icon"></i>
+        اللهم اجعل القرآن الكريم شفيعًا له يوم القيامة
+        <i class="fas fa-star memory-icon"></i>
+    </div>
+
+    <script>
+        // بيانات جميع سور القرآن الكريم (114 سورة)
+        const surahs = [
+            { name: "الفاتحة", id: 1, verses: 7, type: "مكية" },
+            { name: "البقرة", id: 2, verses: 286, type: "مدنية" },
+            { name: "آل عمران", id: 3, verses: 200, type: "مدنية" },
+            { name: "النساء", id: 4, verses: 176, type: "مدنية" },
+            { name: "المائدة", id: 5, verses: 120, type: "مدنية" },
+            { name: "الأنعام", id: 6, verses: 165, type: "مكية" },
+            { name: "الأعراف", id: 7, verses: 206, type: "مكية" },
+            { name: "الأنفال", id: 8, verses: 75, type: "مدنية" },
+            { name: "التوبة", id: 9, verses: 129, type: "مدنية" },
+            { name: "يونس", id: 10, verses: 109, type: "مكية" },
+            { name: "هود", id: 11, verses: 123, type: "مكية" },
+            { name: "يوسف", id: 12, verses: 111, type: "مكية" },
+            { name: "الرعد", id: 13, verses: 43, type: "مدنية" },
+            { name: "إبراهيم", id: 14, verses: 52, type: "مكية" },
+            { name: "الحجر", id: 15, verses: 99, type: "مكية" },
+            { name: "النحل", id: 16, verses: 128, type: "مكية" },
+            { name: "الإسراء", id: 17, verses: 111, type: "مكية" },
+            { name: "الكهف", id: 18, verses: 110, type: "مكية" },
+            { name: "مريم", id: 19, verses: 98, type: "مكية" },
+            { name: "طه", id: 20, verses: 135, type: "مكية" },
+            { name: "الأنبياء", id: 21, verses: 112, type: "مكية" },
+            { name: "الحج", id: 22, verses: 78, type: "مدنية" },
+            { name: "المؤمنون", id: 23, verses: 118, type: "مكية" },
+            { name: "النور", id: 24, verses: 64, type: "مدنية" },
+            { name: "الفرقان", id: 25, verses: 77, type: "مكية" },
+            { name: "الشعراء", id: 26, verses: 227, type: "مكية" },
+            { name: "النمل", id: 27, verses: 93, type: "مكية" },
+            { name: "القصص", id: 28, verses: 88, type: "مكية" },
+            { name: "العنكبوت", id: 29, verses: 69, type: "مكية" },
+            { name: "الروم", id: 30, verses: 60, type: "مكية" },
+            { name: "لقمان", id: 31, verses: 34, type: "مكية" },
+            { name: "السجدة", id: 32, verses: 30, type: "مكية" },
+            { name: "الأحزاب", id: 33, verses: 73, type: "مدنية" },
+            { name: "سبأ", id: 34, verses: 54, type: "مكية" },
+            { name: "فاطر", id: 35, verses: 45, type: "مكية" },
+            { name: "يس", id: 36, verses: 83, type: "مكية" },
+            { name: "الصافات", id: 37, verses: 182, type: "مكية" },
+            { name: "ص", id: 38, verses: 88, type: "مكية" },
+            { name: "الزمر", id: 39, verses: 75, type: "مكية" },
+            { name: "غافر", id: 40, verses: 85, type: "مكية" },
+            { name: "فصلت", id: 41, verses: 54, type: "مكية" },
+            { name: "الشورى", id: 42, verses: 53, type: "مكية" },
+            { name: "الزخرف", id: 43, verses: 89, type: "مكية" },
+            { name: "الدخان", id: 44, verses: 59, type: "مكية" },
+            { name: "الجاثية", id: 45, verses: 37, type: "مكية" },
+            { name: "الأحقاف", id: 46, verses: 35, type: "مكية" },
+            { name: "محمد", id: 47, verses: 38, type: "مدنية" },
+            { name: "الفتح", id: 48, verses: 29, type: "مدنية" },
+            { name: "الحجرات", id: 49, verses: 18, type: "مدنية" },
+            { name: "ق", id: 50, verses: 45, type: "مكية" },
+            { name: "الذاريات", id: 51, verses: 60, type: "مكية" },
+            { name: "الطور", id: 52, verses: 49, type: "مكية" },
+            { name: "النجم", id: 53, verses: 62, type: "مكية" },
+            { name: "القمر", id: 54, verses: 55, type: "مكية" },
+            { name: "الرحمن", id: 55, verses: 78, type: "مدنية" },
+            { name: "الواقعة", id: 56, verses: 96, type: "مكية" },
+            { name: "الحديد", id: 57, verses: 29, type: "مدنية" },
+            { name: "المجادلة", id: 58, verses: 22, type: "مدنية" },
+            { name: "الحشر", id: 59, verses: 24, type: "مدنية" },
+            { name: "الممتحنة", id: 60, verses: 13, type: "مدنية" },
+            { name: "الصف", id: 61, verses: 14, type: "مدنية" },
+            { name: "الجمعة", id: 62, verses: 11, type: "مدنية" },
+            { name: "المنافقون", id: 63, verses: 11, type: "مدنية" },
+            { name: "التغابن", id: 64, verses: 18, type: "مدنية" },
+            { name: "الطلاق", id: 65, verses: 12, type: "مدنية" },
+            { name: "التحريم", id: 66, verses: 12, type: "مدنية" },
+            { name: "الملك", id: 67, verses: 30, type: "مكية" },
+            { name: "القلم", id: 68, verses: 52, type: "مكية" },
+            { name: "الحاقة", id: 69, verses: 52, type: "مكية" },
+            { name: "المعارج", id: 70, verses: 44, type: "مكية" },
+            { name: "نوح", id: 71, verses: 28, type: "مكية" },
+            { name: "الجن", id: 72, verses: 28, type: "مكية" },
+            { name: "المزمل", id: 73, verses: 20, type: "مكية" },
+            { name: "المدثر", id: 74, verses: 56, type: "مكية" },
+            { name: "القيامة", id: 75, verses: 40, type: "مكية" },
+            { name: "الإنسان", id: 76, verses: 31, type: "مدنية" },
+            { name: "المرسلات", id: 77, verses: 50, type: "مكية" },
+            { name: "النبأ", id: 78, verses: 40, type: "مكية" },
+            { name: "النازعات", id: 79, verses: 46, type: "مكية" },
+            { name: "عبس", id: 80, verses: 42, type: "مكية" },
+            { name: "التكوير", id: 81, verses: 29, type: "مكية" },
+            { name: "الانفطار", id: 82, verses: 19, type: "مكية" },
+            { name: "المطففين", id: 83, verses: 36, type: "مكية" },
+            { name: "الانشقاق", id: 84, verses: 25, type: "مكية" },
+            { name: "البروج", id: 85, verses: 22, type: "مكية" },
+            { name: "الطارق", id: 86, verses: 17, type: "مكية" },
+            { name: "الأعلى", id: 87, verses: 19, type: "مكية" },
+            { name: "الغاشية", id: 88, verses: 26, type: "مكية" },
+            { name: "الفجر", id: 89, verses: 30, type: "مكية" },
+            { name: "البلد", id: 90, verses: 20, type: "مكية" },
+            { name: "الشمس", id: 91, verses: 15, type: "مكية" },
+            { name: "الليل", id: 92, verses: 21, type: "مكية" },
+            { name: "الضحى", id: 93, verses: 11, type: "مكية" },
+            { name: "الشرح", id: 94, verses: 8, type: "مكية" },
+            { name: "التين", id: 95, verses: 8, type: "مكية" },
+            { name: "العلق", id: 96, verses: 19, type: "مكية" },
+            { name: "القدر", id: 97, verses: 5, type: "مكية" },
+            { name: "البينة", id: 98, verses: 8, type: "مدنية" },
+            { name: "الزلزلة", id: 99, verses: 8, type: "مدنية" },
+            { name: "العاديات", id: 100, verses: 11, type: "مكية" },
+            { name: "القارعة", id: 101, verses: 11, type: "مكية" },
+            { name: "التكاثر", id: 102, verses: 8, type: "مكية" },
+            { name: "العصر", id: 103, verses: 3, type: "مكية" },
+            { name: "الهمزة", id: 104, verses: 9, type: "مكية" },
+            { name: "الفيل", id: 105, verses: 5, type: "مكية" },
+            { name: "قريش", id: 106, verses: 4, type: "مكية" },
+            { name: "الماعون", id: 107, verses: 7, type: "مكية" },
+            { name: "الكوثر", id: 108, verses: 3, type: "مكية" },
+            { name: "الكافرون", id: 109, verses: 6, type: "مكية" },
+            { name: "النصر", id: 110, verses: 3, type: "مدنية" },
+            { name: "المسد", id: 111, verses: 5, type: "مكية" },
+            { name: "الإخلاص", id: 112, verses: 4, type: "مكية" },
+            { name: "الفلق", id: 113, verses: 5, type: "مكية" },
+            { name: "الناس", id: 114, verses: 6, type: "مكية" }
+        ];
+
+        const list = document.getElementById("list");
+        const frame = document.getElementById("quranFrame");
+        const search = document.getElementById("search");
+        const loading = document.getElementById("loading");
+        let activeCard = null;
+
+        // عرض قائمة السور
+        function render(arr) {
+            list.innerHTML = "";
+            
+            if (arr.length === 0) {
+                list.innerHTML = '<div class="no-results">لم يتم العثور على سورة بهذا الاسم</div>';
+                return;
+            }
+            
+            arr.forEach(s => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                    <div class="surah-name">سورة ${s.name}</div>
+                    <div class="surah-info">
+                        <span>${s.verses} آيات</span>
+                        <span>${s.type}</span>
+                    </div>
+                `;
+                
+                card.addEventListener("click", () => openSurah(s.id, card));
+                
+                list.appendChild(card);
+                
+                // تعيين أول سورة كافتراضية عند التحميل الأول
+                if (s.id === 1 && activeCard === null) {
+                    openSurah(s.id, card);
+                }
+            });
+        }
+
+        // فتح السورة في iframe
+        function openSurah(id, cardElement) {
+            // إزالة التفعيل من البطاقة السابقة
+            if (activeCard) {
+                activeCard.classList.remove("active");
+            }
+            
+            // تفعيل البطاقة الجديدة
+            if (cardElement) {
+                cardElement.classList.add("active");
+                activeCard = cardElement;
+                
+                // التمرير إلى البطاقة المحددة
+                cardElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+            
+            // إظهار مؤشر التحميل
+            loading.style.display = "flex";
+            frame.style.display = "none";
+            
+            // تعيين مصدر iframe
+            frame.src = `https://quran.com/${id}?font=v2`;
+            
+            // إخفاء مؤشر التحميل بعد تحميل الإطار
+            frame.onload = () => {
+                loading.style.display = "none";
+                frame.style.display = "block";
+            };
+        }
+
+        // بحث مباشر عند الكتابة
+        search.addEventListener("input", () => {
+            let query = search.value.trim();
+            if (query.length === 0) {
+                render(surahs);
+            } else {
+                const filtered = surahs.filter(s => 
+                    s.name.includes(query) || 
+                    s.name.replace("ال", "").includes(query.replace("ال", ""))
+                );
+                render(filtered);
+            }
+        });
+
+        // البحث عند الضغط على Enter
+        search.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                let query = search.value.trim();
+                if (query.length > 0) {
+                    const filtered = surahs.filter(s => 
+                        s.name.includes(query) || 
+                        s.name.replace("ال", "").includes(query.replace("ال", ""))
+                    );
+                    
+                    if (filtered.length > 0) {
+                        openSurah(filtered[0].id);
+                    }
+                }
+            }
+        });
+
+        // عرض كامل القائمة أول مرة
+        render(surahs);
+        
+        // فتح سورة الفاتحة افتراضياً عند التحميل
+        setTimeout(() => {
+            const firstCard = document.querySelector(".card");
+            if (firstCard) {
+                openSurah(1, firstCard);
+            }
+        }, 500);
+        
+        // إضافة تأثير عند فتح التطبيق
+        window.addEventListener('load', function() {
+            document.querySelector('.memory-section').style.animation = 'fadeIn 1.5s ease-out';
+        });
+    </script>
+</body>
+</html>
